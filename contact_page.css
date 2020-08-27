@@ -1,0 +1,70 @@
+.navbar{
+  opacity: 85%;
+}
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 25px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.navbar li a:hover {
+  background-color: #4CAF50;
+}
+
+body {
+  background-image: url('contactpage.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+}
+
+.bodypart{
+  padding-top: 100px;
+  height: 700px;
+}
+
+.contactinfo{
+  background-color: #fff;
+  width: 45%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 10px;
+  opacity: 85%;
+}
+
+.socialmedia ul{
+  list-style-type: none;
+  padding-left: 0;
+
+}
+
+.socialmedia li{
+  display: inline-block;
+}
+
+.footerdiv{
+   background-color: #d3d3d3;
+   opacity: 70%;
+   padding: 10px;
+   bottom: 0;
+
+}

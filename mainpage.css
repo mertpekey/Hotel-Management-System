@@ -1,0 +1,71 @@
+.navbar{
+  opacity: 85%;
+  font-size: 20px;
+}
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 25px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.navbar li a:hover {
+  background-color: #4CAF50;
+}
+
+body {
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 25px;
+}
+
+.bodypart{
+  padding-top: 100px;
+  height: 550px;
+}
+
+
+
+.nicebutton{
+  width: 30%;
+  padding: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50; /* Green */
+  transition-duration: 0.4s;
+  border-radius: 12px;
+  font-size: 20px;
+  opacity: 85%;
+}
+
+.nicebutton:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  cursor: pointer;
+}
+
+.footerdiv{
+   background-color: #d3d3d3;
+   opacity: 70%;
+   padding: 10px;
+   bottom: 0;
+   font-size: 20px;
+
+}

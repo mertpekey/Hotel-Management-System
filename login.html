@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Main Page</title>
+	<link rel="stylesheet" type="text/css" href="login.css" />
+</head>
+<body>
+	<div class = "navbar">
+		<ul>
+  			<li><a href="mainpage.html">Home</a></li>
+  			<li><a href="login.html">Admin Login</a></li>
+ 			<li><a href="reservation_page.php">Make Reservation</a></li>
+ 			<li><a href="contact_page.html">About</a></li>
+		</ul>
+	</div>
+
+	<div class = "bodypart" align = "center">
+		<form action='login.php' method=POST>
+                   <div class=logintext>
+                       <label for="text">Your ID:</label>
+                       <br>
+                       <br>
+                       <input type="text" name="adminid" placeholder="Please Enter Username">
+                       <br>
+                       <br>
+                       <br>
+                       <label for="Password">Password:</label>
+                       <br>
+                       <br>
+                       <input type="Password" name="pass" placeholder="Please Enter Password">
+                       <br>
+                       <br>
+                       <input id="buton" type="submit" value= "Submit" / name="log">
+                   </div>
+            </form>
+	</div>
+	<div class = "footerdiv">
+			<p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</p>
+	</div>
+
+</body>
+</html>

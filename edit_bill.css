@@ -1,0 +1,53 @@
+.navbar{
+  opacity: 85%;
+}
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 25px 50px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.navbar li a:hover {
+  background-color: #4CAF50;
+}
+
+body{
+	font-size: 20px;
+}
+
+.addbill, .updatebill, .removebill{
+	margin-left: 30px;
+	padding: 20px;
+	height: auto;
+	display: inline-block;
+	width: 400px;
+}
+.addbill{
+	background-color: #A9A9A9;
+}
+.updatebill{
+	background-color: #C0C0C0;
+}
+.removebill{
+	background-color: #D3D3D3;
+}
+
+.editcustomer_body{
+	
+
+}

@@ -1,0 +1,79 @@
+.navbar{
+  opacity: 85%;
+  font-size: 20px;
+}
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 25px 50px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.navbar li a:hover {
+  background-color: #4CAF50;
+}
+
+body{
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bodypart{
+  padding-top: 30px;
+  height: 550px;
+  font-size: 30px;
+  padding-bottom: 150px;
+}
+
+
+
+.nicebutton{
+  width: 20%;
+  padding: 10px;
+  background-color: white;
+  color: black;
+  transition-duration: 0.4s;
+  border-radius: 12px;
+  font-size: 20px;
+}
+
+.nicebutton:hover {
+  color: white;
+  cursor: pointer;
+}
+.green:hover{
+  background-color: #4CAF50;
+}
+.blue:hover{
+  background-color: #008CBA;
+}
+.grey:hover{
+  background-color: #e7e7e7;
+  color: #A9A9A9;
+}
+.red:hover{
+  background-color: #f44336;
+}
+.black:hover{
+  background-color: #555555;
+}
+
+
+
+
+
