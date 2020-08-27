@@ -88,12 +88,25 @@
 					</form>
 				</div> 
 			</div>
-		
 
-	</div>
-</body>
-</html>
-<div id="table">
+			<div class = "removebill">
+				<div id="form"> 
+					<h3> Search Bill </h3> 
+					<form action='edit_bill.php' method=POST>
+					<b> Bill ID: </b>
+					<input type='text' name='id'> 
+					<br>
+					<br>
+					<input type='submit' value="Search">
+					<br>
+					</form>
+				</div> 
+			</div>
+
+
+<h3>All Bill Informations</h3>
+
+			<div id="table">
 <?php
 $con=mysqli_connect("localhost","root","","hotel_management");
 // Check connection
@@ -126,3 +139,46 @@ echo "</tr>";
 echo "</table>";
 ?>
 </div> 
+
+<h3>Searched Bill Informations</h3>
+
+<div id="table">
+<?php
+$con=mysqli_connect("localhost","root","","hotel_management");
+// Check connection
+if (mysqli_connect_errno())
+{
+echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+
+$nid=$_POST['id'];
+
+$result = mysqli_query($con,"SELECT * FROM Bill_Payment WHERE bid = $nid");
+
+echo "<table border='1'>
+<tr>
+<th>Bill ID</th>
+<th>SSN</th>
+<th>Price</th>
+<th>Bill Type</th>
+<th>Bill Date</th>
+</tr>";
+
+while($row = mysqli_fetch_array($result,MYSQLI_ASSOC))
+{
+echo "<tr>";
+echo "<td>" . $row['bid'] . "</td>";
+echo "<td>" . $row['ssn'] . "</td>";
+echo "<td>" . $row['price'] . "</td>";
+echo "<td>" . $row['btype'] . "</td>";
+echo "<td>" . $row['bdate'] . "</td>";
+echo "</tr>";
+}
+echo "</table>";
+?>
+</div> 
+		
+
+	</div>
+</body>
+</html>

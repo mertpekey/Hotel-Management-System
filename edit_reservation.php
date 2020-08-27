@@ -74,7 +74,7 @@
 					<h3> Remove Reservation </h3> 
 					<form action='remove_reservation.php' method=POST>
 					<b> Reservation ID: </b>
-					<input type='text' name='ssn'> 
+					<input type='text' name='rid'> 
 					<br>
 					<br>
 					<input type='submit' value="Delete">
@@ -82,12 +82,24 @@
 					</form>
 				</div> 
 			</div>
-		
 
-	</div>
-</body>
-</html>
-<div id="table">
+			<div class = "removereservation">
+				<div id="form"> 
+					<h3> Search Reservation </h3> 
+					<form action='edit_reservation.php' method=POST>
+					<b> Reservation ID: </b>
+					<input type='text' name='rid'> 
+					<br>
+					<br>
+					<input type='submit' value="Search">
+					<br>
+					</form>
+				</div> 
+			</div>
+
+			<h3>All Reservation Informations</h3>
+
+			<div id="table">
 <?php
 $con=mysqli_connect("localhost","root","","hotel_management");
 // Check connection
@@ -122,3 +134,47 @@ echo "</table>";
 mysqli_close($con);
 ?>
 </div> 
+
+<h3>Searched Reservation Informations</h3>
+
+<div id="table">
+<?php
+$con=mysqli_connect("localhost","root","","hotel_management");
+// Check connection
+if (mysqli_connect_errno())
+{
+echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+$nid=$_POST['rid'];
+
+$result = mysqli_query($con,"SELECT * FROM Reservation WHERE rid = $nid");
+
+echo "<table border='1'>
+<tr>
+<th>Reservation ID</th>
+<th>Hotel ID</th>
+<th>SSN</th>
+<th>Start Date</th>
+<th>End Date</th>
+</tr>";
+
+while($row = mysqli_fetch_array($result,MYSQLI_ASSOC))
+{
+echo "<tr>";
+echo "<td>" . $row['rid'] . "</td>";
+echo "<td>" . $row['hid'] . "</td>";
+echo "<td>" . $row['ssn'] . "</td>";
+echo "<td>" . $row['startdate'] . "</td>";
+echo "<td>" . $row['enddate'] . "</td>";
+echo "</tr>";
+}
+echo "</table>";
+
+mysqli_close($con);
+?>
+</div> 
+		
+
+	</div>
+</body>
+</html>

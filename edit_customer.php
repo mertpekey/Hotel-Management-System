@@ -89,12 +89,27 @@
 					</form>
 				</div> 
 			</div>
-		
 
-	</div>
-</body>
-</html>
-<div id="table">
+
+			<div class = "removecustomer">
+				<div id="form"> 
+					<h3> Search Customer </h3> 
+					<form action='edit_customer.php' method=POST>
+
+					<b> SSN: </b>
+					<input type='text' name='ssn'> 
+					<br>
+					<br>
+					
+					<input type='submit' value="Search">
+					<br>
+					</form>
+				</div> 
+			</div>
+
+			<h3>All Customer Informations</h3>
+
+			<div id="table">
 <?php
 $con=mysqli_connect("localhost","root","","hotel_management");
 // Check connection
@@ -124,4 +139,45 @@ echo "</tr>";
 }
 echo "</table>";
 ?>
-</div> 
+</div>
+
+<h3>Searched Customer Informations</h3>
+
+<div id="table">
+<?php
+$con=mysqli_connect("localhost","root","","hotel_management");
+// Check connection
+if (mysqli_connect_errno())
+{
+echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+
+$nid=$_POST['ssn'];
+
+$result = mysqli_query($con,"SELECT * FROM Customer WHERE ssn = $nid");
+
+echo "<table border='1'>
+<tr>
+<th>SSN</th>
+<th>Name</th>
+<th>Mail</th>
+<th>Address</th>
+</tr>";
+
+while($row = mysqli_fetch_array($result,MYSQLI_ASSOC))
+{
+echo "<tr>";
+echo "<td>" . $row['ssn'] . "</td>";
+echo "<td>" . $row['name'] . "</td>";
+echo "<td>" . $row['mail'] . "</td>";
+echo "<td>" . $row['address'] . "</td>";
+echo "</tr>";
+}
+echo "</table>";
+?>
+</div>  
+		
+
+	</div>
+</body>
+</html>

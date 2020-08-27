@@ -127,7 +127,7 @@
 						<br>
 						
 						
-						<label for="fbtype">Bill Type: </label>
+						<label for="fbtype">Bill Type: (Credit Card, Cash or Paypal) </label>
 						<input type='text' id ="fbtype" name='btype' placeholder="Please Enter Bill Type"> 
 						<br>
 						<br>
